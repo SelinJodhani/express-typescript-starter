@@ -1,0 +1,42 @@
+{
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "transpileOnly": true
+  },
+  "compileOnSave": false,
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ES2022",
+    "lib": ["ES2022", "ESNext.AsyncIterable"],
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "module": "CommonJS",
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "dist",
+    "allowJs": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "baseUrl": "src",
+    "paths": {
+      "@Configs": ["configs"],
+      "@Controllers/*": ["controllers/*"],
+      "@Databases": ["databases"],
+      "@Dtos/*": ["dtos/*"],
+      "@Classes/*": ["classes/*"],
+      "@Interfaces/*": ["interfaces/*"],
+      "@Middlewares/*": ["middlewares/*"],
+      "@Models/*": ["models/*"],
+      "@Services/*": ["services/*"],
+      "@Utils/*": ["utils/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.json", ".env"],
+  "exclude": ["node_modules", "src/http", "src/logs", "src/tests"]
+}

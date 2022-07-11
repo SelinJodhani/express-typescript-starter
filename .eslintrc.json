@@ -1,0 +1,88 @@
+{
+    "env": {
+      "es2022": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb-base",
+      "prettier",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:import/typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "prettier", "import", "prefer-arrow"],
+    "rules": {
+      "import/extensions": ["error", "ignorePackages", { "ts": "never" }],
+      "no-console": "error",
+      "sort-imports": [
+        "error",
+        {
+          "allowSeparatedGroups": true
+        }
+      ],
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "never",
+          "objects": "only-multiline",
+          "imports": "never",
+          "exports": "never",
+          "functions": "never"
+        }
+      ],
+      "max-len": [
+        "error",
+        {
+          "code": 140,
+          "ignoreUrls": true,
+          "ignoreRegExpLiterals": true,
+          "ignorePattern": "^import .*"
+        }
+      ],
+      "object-curly-newline": [
+        "error",
+        {
+          "ImportDeclaration": { "multiline": true }
+        }
+      ],
+      "prefer-arrow/prefer-arrow-functions": [
+        "error",
+        {
+          "disallowPrototype": true,
+          "singleReturnOnly": false,
+          "classPropertiesAllowed": false
+        }
+      ],
+      "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+      "prefer-destructuring": ["error", { "VariableDeclarator": { "object": true } }],
+      "@typescript-eslint/no-use-before-define": ["error"],
+      "@typescript-eslint/no-shadow": ["error"],
+      "@typescript-eslint/no-explicit-any": ["off"],
+      "no-shadow": "off",
+      "arrow-parens": "off",
+      "import/no-cycle": 0,
+      "import/no-unresolved": 0,
+      "import/prefer-default-export": 0,
+      "no-use-before-define": 0,
+      "implicit-arrow-linebreak": 0,
+      "no-plusplus": 0,
+      "consistent-return": 0,
+      "no-underscore-dangle": 0,
+      "guard-for-in": 0,
+      "max-classes-per-file": 0,
+      "no-continue": 0,
+      "default-case": 0,
+      "class-methods-use-this": 0,
+      "brace-style": 0,
+      "array-callback-return": 0,
+      "linebreak-style": 0,
+      "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }]
+    }
+  }

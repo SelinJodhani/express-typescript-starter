@@ -1,7 +1,7 @@
 {
-  "name": "xpense",
+  "name": "express-typescript-starter",
   "version": "1.0.0",
-  "description": "Money management app for expense tracking.",
+  "description": "Quick and Easy TypeScript Express Starter",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && cross-env NODE_ENV=production node dist/server.js",
